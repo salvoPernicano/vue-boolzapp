@@ -17,7 +17,7 @@ body{
 }
 
 #contactList{
-    background-color: lightgrey;
+    background-color: rgb(228, 222, 222);
     /* height: calc(100vh - 100px); */
 }
 #notify figure,
@@ -36,7 +36,7 @@ body{
 }
 
 #chatBox{
-    background-color: lightblue;
+    background-color: lightgrey;
 }
 
 #userIcons{
@@ -56,5 +56,9 @@ body{
     background-color: white;
 }
 
+.chatWindow{
+    background-image: url(./img/mine.jpg);
+    height: 100%;
+}
 
 
