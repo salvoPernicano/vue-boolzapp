@@ -86,3 +86,8 @@ body{
     background-color: white;
     border-radius: 5px;
 }
+
+.chatWindow{
+    overflow: auto;
+    height: calc(80vh - 100px);
+}
