@@ -20,19 +20,20 @@ body{
     background-color: lightgrey;
     /* height: calc(100vh - 100px); */
 }
+#notify figure,
 #chatBox figure,
 #contactList figure {
     margin: 0;
     height: 50px;
     width: 50px;
 }
+#notify figure img,
 #chatBox figure img,
 #contactList figure img{
     width: 100%;
     display: block;
     border-radius: 50%;
 }
-
 
 #chatBox{
     background-color: lightblue;
@@ -41,3 +42,19 @@ body{
 #userIcons{
   color: grey;
 }
+
+#notify{
+    background-color: #8cd7fa;
+}
+
+#notify figure{
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+
+
