@@ -17,7 +17,7 @@ createApp({
         ]
       },
       {
-        name: 'Michele',
+        name: 'Fabio',
         avatar: './assets/img/avatar_2.jpg',
         visible: true,
         messages : [
@@ -29,7 +29,7 @@ createApp({
         ]
       },
       {
-        name: 'Michele',
+        name: 'Samuele',
         avatar: './assets/img/avatar_3.jpg',
         visible: true,
         messages : [
@@ -41,7 +41,7 @@ createApp({
         ]
       },
       {
-        name: 'Fabio',
+        name: 'Alessandro B.',
         avatar: './assets/img/avatar_4.jpg',
         visible: true,
         messages : [
@@ -53,7 +53,7 @@ createApp({
         ]
       },
       {
-        name: 'Samuele',
+        name: 'Alessandro L.',
         avatar: './assets/img/avatar_5.jpg',
         visible: true,
         messages : [
@@ -65,7 +65,7 @@ createApp({
         ]
       },
       {
-        name: 'Alessandro',
+        name: 'CLaudia',
         avatar: './assets/img/avatar_6.jpg',
         visible: true,
         messages : [
@@ -77,7 +77,7 @@ createApp({
         ]
       },
       {
-        name: 'CLaudia',
+        name: 'Federico',
         avatar: './assets/img/avatar_7.jpg',
         visible: true,
         messages : [
@@ -89,7 +89,7 @@ createApp({
         ]
       },
       {
-        name: 'Federico',
+        name: 'Davide',
         avatar: './assets/img/avatar_8.jpg',
         visible: true,
         messages : [
@@ -101,7 +101,15 @@ createApp({
         ]
       },
 
-     ]
+     ],
+     currentContactIndex : 0
+    }
+  },
+  methods : {
+    chooseContact : function(index){
+      this.currentContactIndex = index;
+      console.log(index, currentContactIndex);
+      
     }
   }
 }).mount('#app')

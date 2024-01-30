@@ -53,7 +53,7 @@
 
                     <!-- lista chat -->
                     <div class="chatContainer bg-light">
-                        <div v-for="(element,index) in contacts" class="d-flex mb-3" id="chatContacts">
+                        <div v-for="(element,index) in contacts" class="d-flex mb-3" id="chatContacts" @click="chooseContact(index)">
                             <figure class="p-1">
                                 <img :src="element.avatar" alt="">
                             </figure>
@@ -72,10 +72,10 @@
                         class="user d-flex justify-content-between bg-secondary-subtle border-start border-dark-subtle align-items-center p-2">
                         <div class="d-flex align-items-center">
                             <figure>
-                                <img src="./assets/img/avatar_1.jpg" alt="avatar">
+                                <img :src="contacts[currentContactIndex].avatar" alt="avatar">
                             </figure>
                             <div class="d-flex flex-column">
-                                <span class="mx-1 fw-bold">Michele</span>
+                                <span class="mx-1 fw-bold">{{contacts[currentContactIndex].name}}</span>
                                 <span class="mx-1 text-secondary">Ultimo accesso oggi alle 12:00</span>
                             </div>
                         </div>
@@ -92,7 +92,6 @@
                         <div class="text-end m-5 d-flex justify-content-end">
                             <span class="userText p-2">Ricordati di stendere i panni! <span class="text-secondary  p-2">12:30</span></span>
                         </div>
-               
                         <div class="text-start m-5 d-flex justify-content-start">
                             <span class="contactText p-2">Tutto fatto!<span class="text-secondary p-2">13:30</span></span>
                         </div>
