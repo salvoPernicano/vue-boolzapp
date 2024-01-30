@@ -8,17 +8,17 @@ body{
     height: 100vh;
     background: rgb(215,215,210);
     background: linear-gradient(0deg, rgba(215,215,210,1) 85%, rgba(0,150,135,1) 85%);
-    padding: 50px;
 }
 
 .container{
+    margin-top: 80px;
     background-color: #e6e6e6;
-    height: calc(100vh - 100px);
+    height: 80vh;
+    border: 1px solid lightslategrey;
 }
 
 #contactList{
     background-color: rgb(228, 222, 222);
-    /* height: calc(100vh - 100px); */
 }
 #notify figure,
 #chatBox figure,
@@ -37,6 +37,10 @@ body{
 
 #chatBox{
     background-color: lightgrey;
+    background-image: url(./img/mine.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #userIcons{
@@ -56,9 +60,15 @@ body{
     background-color: white;
 }
 
-.chatWindow{
-    background-image: url(./img/mine.jpg);
-    height: 100%;
+
+
+.chatContainer{
+    width: 100%;
+    overflow: auto;
+    height: calc(80vh - 200px);
 }
 
 
+#upperLeft {
+    height: 200px;
+}
