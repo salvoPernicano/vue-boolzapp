@@ -17,14 +17,25 @@ body{
 }
 
 #contactList{
-    background-color: lightcoral;
+    background-color: lightgrey;
     /* height: calc(100vh - 100px); */
+}
+#chatBox figure,
+#contactList figure {
+    margin: 0;
+    height: 50px;
+    width: 50px;
+}
+#chatBox figure img,
+#contactList figure img{
+    width: 100%;
+    display: block;
+    border-radius: 50%;
 }
 
 
 #chatBox{
     background-color: lightblue;
-    /* height: calc(100vh - 100px); */
 }
 
 #userIcons{
