@@ -8,4 +8,25 @@ body{
     height: 100vh;
     background: rgb(215,215,210);
     background: linear-gradient(0deg, rgba(215,215,210,1) 85%, rgba(0,150,135,1) 85%);
+    padding: 50px;
+}
+
+.container{
+    background-color: #e6e6e6;
+    height: calc(100vh - 100px);
+}
+
+#contactList{
+    background-color: lightcoral;
+    /* height: calc(100vh - 100px); */
+}
+
+
+#chatBox{
+    background-color: lightblue;
+    /* height: calc(100vh - 100px); */
+}
+
+#userIcons{
+  color: grey;
 }
