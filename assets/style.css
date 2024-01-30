@@ -20,14 +20,14 @@ body{
 #contactList{
     background-color: rgb(228, 222, 222);
 }
-#notify figure,
+
 #chatBox figure,
 #contactList figure {
     margin: 0;
     height: 50px;
     width: 50px;
 }
-#notify figure img,
+
 #chatBox figure img,
 #contactList figure img{
     width: 100%;
@@ -51,16 +51,12 @@ body{
     background-color: #8cd7fa;
 }
 
-#notify figure{
-    border-radius: 50%;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#notify .fa-bell-slash{
     background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    color: #8cd7fa;
 }
-
-
 
 .chatContainer{
     width: 100%;
@@ -68,7 +64,11 @@ body{
     height: calc(80vh - 200px);
 }
 
-
 #upperLeft {
     height: 200px;
+}
+
+#chatContacts:hover{
+    background-color: rgb(178, 188, 197);
+    cursor: pointer;
 }
