@@ -16,9 +16,7 @@
         <div class="container">
             <div class="row">
                 <!-- left side della web app -->
-
                 <div id="contactList" class="col-4 p-0 bg-light">
-
                     <!-- Above lista contatti -->
                     <div id="upperLeft">
                         <div class="user d-flex justify-content-between align-items-center p-2">
@@ -41,19 +39,16 @@
                                 <a href="#" class="text-secondary">Attiva notifiche Desktop</a>
                             </div>
                         </div>
-
                         <div class="container-fluid input-group border d-flex align-items-center p-">
                             <i class="fa-solid fa-magnifying-glass p-2"></i>
-                            <input class="form-control  border-0" type="search"
+                            <input v-model="search" class="form-control  border-0" type="search"
                                 placeholder="Cerca o inizia una nuova chat" aria-label="Search">
                         </div>
-
                     </div>
                     <!-- Fine parte superiore -->
-
-                    <!-- lista chat -->
+                    <!-- lista chat / parte ineriore-->
                     <div class="chatContainer bg-light">
-                        <div v-for="(element,index) in contacts" class="d-flex mb-3" id="chatContacts"
+                        <div v-for="(element,index) in filteredList" class="d-flex mb-3" id="chatContacts"
                             @click="chooseContact(index)">
                             <figure class="p-1">
                                 <img :src="element.avatar" alt="">
@@ -66,9 +61,8 @@
                     </div>
                 </div>
 
-
                 <!-- rigth side web app -->
-                <div id="chatBox" class="col-8 p-0 d-flex flex-column justify-content-between">
+                <div id="chatBox" class="col-8 p-0 d-flex flex-column">
                     <div
                         class="user d-flex justify-content-between bg-secondary-subtle border-start border-dark-subtle align-items-center p-2">
                         <div class="d-flex align-items-center">
@@ -87,34 +81,16 @@
                         </div>
                     </div>
                     <div class="chatWindow">
-             
-            
-      
-         
-                        <div class="text-end m-5 d-flex justify-content-end">
-                            <span class="userText p-2">hai portato a spasso il cane? <span
-                                    class="text-secondary  p-2">12:30</span></span>
-                        </div>
-                        <div class="text-end m-5 d-flex justify-content-end">
-                            <span class="userText p-2">hai portato sotto i panni? <span
-                                    class="text-secondary  p-2">12:30</span></span>
-                        </div>
-                
-                        <div class="text-start m-5 d-flex justify-content-start">
-                            <span class="contactText p-2">Tutto fatto!<span
-                                    class="text-secondary p-2">13:30</span></span>
+                        <div v-for="text in contacts[currentContactIndex].messages" class="text-end m-5 d-flex justify-content-end">
+                            <span class="userText p-2">{{text.message}}</span>
                         </div>
                     </div>
                     <div class="bg-secondary-subtle p-2 d-flex align-items-center">
                         <i class="fa-regular fa-face-smile text-secondary p-2"></i>
-                        <input type="text" class="form-control" id="messageText" placeholder="Scriv un messaggio">
+                        <input @keyup.enter="sendMessage(index)" v-model="newMessage" type="text" class="form-control" id="messageText" placeholder="Scrivi un messaggio">
                         <i class="fa-solid fa-microphone text-secondary p-3"></i>
                     </div>
                 </div>
-
-
-                <!-- bottom -->
-
             </div>
         </div>
     </div>

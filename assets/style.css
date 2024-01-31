@@ -89,5 +89,5 @@ body{
 
 .chatWindow{
     overflow: auto;
-    height: calc(80vh - 200px);
+    height: calc(80vh - 100px);
 }

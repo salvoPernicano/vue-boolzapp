@@ -13,7 +13,12 @@ createApp({
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
             status: 'sent'
-            }
+            },
+            {
+              date: '10/01/2020 15:30:55',
+              message: 'tu spacchi gnuste',
+              status: 'sent'
+              }
         ]
       },
       {
@@ -23,7 +28,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: 'tu spacchi gnuste',
             status: 'sent'
             }
         ]
@@ -65,7 +70,7 @@ createApp({
         ]
       },
       {
-        name: 'CLaudia',
+        name: 'Claudia',
         avatar: './assets/img/avatar_6.jpg',
         visible: true,
         messages : [
@@ -102,7 +107,9 @@ createApp({
       },
 
      ],
-     currentContactIndex : 0
+     currentContactIndex : 0,
+     newMessage : '',
+     search : ''
     }
   },
   methods : {
@@ -110,6 +117,22 @@ createApp({
       this.currentContactIndex = index;
       console.log(index, currentContactIndex);
       
+    },
+    sendMessage : function(index){
+      let newSentMessage =      {
+        date: '10/01/2020 15:30:55',
+        message: this.newMessage,
+        status: 'received'
+        };
+        this.contacts[this.currentContactIndex].messages.push(newSentMessage);
+        this.newMessage = ''
+    }
+  },
+  computed: {
+    filteredList() {
+      return this.contacts.filter(element => {
+       return element.name.toLowerCase().includes(this.search.toLowerCase())
+      })
     }
   }
 }).mount('#app')
