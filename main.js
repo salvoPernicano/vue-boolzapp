@@ -12,13 +12,8 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
-            },
-            {
-              date: '10/01/2020 15:30:55',
-              message: 'tu spacchi gnuste',
-              status: 'sent'
-              }
+            status: 'received'
+            }
         ]
       },
       {
@@ -29,7 +24,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'tu spacchi gnuste',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -41,7 +36,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -53,7 +48,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -65,7 +60,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -77,7 +72,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -89,7 +84,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -101,7 +96,7 @@ createApp({
           {
             date: '10/01/2020 15:30:55',
             message: 'Hai portato a spasso il cane?',
-            status: 'sent'
+            status: 'received'
             }
         ]
       },
@@ -109,7 +104,7 @@ createApp({
      ],
      currentContactIndex : 0,
      newMessage : '',
-     search : ''
+     search : '',
     }
   },
   methods : {
@@ -118,6 +113,15 @@ createApp({
       console.log(index, currentContactIndex);
       
     },
+    responseMessage : function() {
+        this.responseText = {
+          date: '10/01/2020 15:30:55',
+          message: "ok",
+          status: 'sent'
+        };
+        console.log(this.responseText);
+        this.contacts[this.currentContactIndex].messages.push(this.responseText) 
+    },
     sendMessage : function(index){
       let newSentMessage =      {
         date: '10/01/2020 15:30:55',
@@ -125,7 +129,9 @@ createApp({
         status: 'received'
         };
         this.contacts[this.currentContactIndex].messages.push(newSentMessage);
-        this.newMessage = ''
+        this.newMessage = '';
+
+        setTimeout(this.responseMessage,2000);
     }
   },
   computed: {
