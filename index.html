@@ -81,8 +81,8 @@
                         </div>
                     </div>
                     <div class="chatWindow">
-                        <div v-for="text in contacts[currentContactIndex].messages" class="text-end m-5 d-flex" :class="(text.status === 'received') ? 'justify-content-end': 'justify-content-start'">
-                            <span class="p-2" :class="(text.status === 'received') ? 'bg-success-subtle': 'bg-light-subtle'">{{text.message}}</span>
+                        <div v-for="text in contacts[currentContactIndex].messages" class="m-5 d-flex" :class="(text.status === 'received') ? 'justify-content-end': 'justify-content-start'">
+                            <span class="p-2 text-left" :class="(text.status === 'received') ? 'bg-success-subtle': 'bg-light-subtle'">{{text.message}}  <span class="date">{{text.date.split(' ')[1]}}</span></span>
                         </div>
                     </div>
                     <div class="bg-secondary-subtle p-2 d-flex align-items-center">

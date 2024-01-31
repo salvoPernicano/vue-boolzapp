@@ -92,3 +92,8 @@ body{
     height: calc(80vh - 100px);
 }
 
+.date{
+    font-size: 0.7rem;
+    display: block;
+    color: rgb(168, 167, 167);
+}

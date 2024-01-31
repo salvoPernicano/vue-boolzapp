@@ -23,7 +23,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'tu spacchi gnuste',
+            message: 'warzonata?',
             status: 'received'
             }
         ]
@@ -35,7 +35,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: 'inter-juve metto 1 fisso si?',
             status: 'received'
             }
         ]
@@ -47,7 +47,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: "l'hai fixato quel bug?",
             status: 'received'
             }
         ]
@@ -59,7 +59,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: 'sai cosa fanno i topi alieni? i cerchi nel grana',
             status: 'received'
             }
         ]
@@ -71,7 +71,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: 'devo implementare il delete message',
             status: 'received'
             }
         ]
@@ -83,7 +83,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: 'ma qualcuno li leggerà mai sti messaggi?',
             status: 'received'
             }
         ]
@@ -95,7 +95,7 @@ createApp({
         messages : [
           {
             date: '10/01/2020 15:30:55',
-            message: 'Hai portato a spasso il cane?',
+            message: 'comunque oggi è il mio compleanno',
             status: 'received'
             }
         ]
@@ -103,6 +103,7 @@ createApp({
 
      ],
      currentContactIndex : 0,
+    orario : ``,
      newMessage : '',
      search : '',
     }
@@ -130,7 +131,6 @@ createApp({
         };
         this.contacts[this.currentContactIndex].messages.push(newSentMessage);
         this.newMessage = '';
-
         setTimeout(this.responseMessage,2000);
     }
   },
