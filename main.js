@@ -120,7 +120,6 @@ createApp({
           message: "ok",
           status: 'sent'
         };
-        console.log(this.responseText);
         this.contacts[this.currentContactIndex].messages.push(this.responseText) 
     },
     sendMessage : function(index){
@@ -132,6 +131,9 @@ createApp({
         this.contacts[this.currentContactIndex].messages.push(newSentMessage);
         this.newMessage = '';
         setTimeout(this.responseMessage,2000);
+    },
+    deleteMessage : function(index , messaggio){
+     console.log(index , messaggio)
     }
   },
   computed: {

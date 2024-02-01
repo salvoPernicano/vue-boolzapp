@@ -97,3 +97,8 @@ body{
     display: block;
     color: rgb(168, 167, 167);
 }
+
+.chatMessageTest{
+    border: 2px dashed red;
+}
+
