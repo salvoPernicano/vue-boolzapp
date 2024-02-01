@@ -113,16 +113,22 @@ createApp({
       this.currentContactIndex = index;  
     },
     responseMessage : function() {
+      const DateTime = luxon.DateTime;
+      const todayDate = DateTime.now();
+      const dataFormattata = todayDate.toLocaleString(DateTime.DATETIME_SHORT);
         this.responseText = {
-          date: '10/01/2020 15:30:55',
+          date: dataFormattata,
           message: "ok",
           status: 'sent'
         };
         this.contacts[this.currentContactIndex].messages.push(this.responseText) 
     },
     sendMessage : function(index){
+      const DateTime = luxon.DateTime;
+      const todayDate = DateTime.now();
+      const dataFormattata = todayDate.toLocaleString(DateTime.DATETIME_SHORT);
       let newSentMessage =      {
-        date: '10/01/2020 15:30:55',
+        date: dataFormattata,
         message: this.newMessage,
         status: 'received'
         };

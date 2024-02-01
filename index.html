@@ -82,7 +82,7 @@
                     </div>
                     <div class="chatWindow">
                         <div v-for="(text , index) in contacts[currentContactIndex].messages" class="m-5 d-flex" :class="(text.status === 'received') ? 'justify-content-end': 'justify-content-start'">
-                            <span class="p-2 dropdown-toggle chatMessageTest text-end" data-bs-toggle="dropdown" aria-expanded="false" :class="(text.status === 'received') ? 'bg-success-subtle': 'bg-light-subtle'">{{text.message}}  <span class="date">{{text.date.split(' ')[1]}}</span><div class="dropdown">
+                            <span class="p-2 dropdown-toggle chatMessageTest text-end" data-bs-toggle="dropdown" aria-expanded="false" :class="(text.status === 'received') ? 'bg-success-subtle': 'bg-light-subtle'">{{text.message}}  <span class="date">{{text.date}}</span><div class="dropdown">
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li><a class="dropdown-item" href="#">Message Info</a></li>
                                   <li><a  @click="deleteMessage(index , text.message)" class="dropdown-item" href="#">Delete</a></li>
@@ -103,7 +103,7 @@
 
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
     <script src="https://kit.fontawesome.com/0211243aaf.js" crossorigin="anonymous"></script>
