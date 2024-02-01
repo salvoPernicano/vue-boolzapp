@@ -110,9 +110,7 @@ createApp({
   },
   methods : {
     chooseContact : function(index){
-      this.currentContactIndex = index;
-      console.log(index, currentContactIndex);
-      
+      this.currentContactIndex = index;  
     },
     responseMessage : function() {
         this.responseText = {
@@ -133,7 +131,9 @@ createApp({
         setTimeout(this.responseMessage,2000);
     },
     deleteMessage : function(index , messaggio){
-     console.log(index , messaggio)
+     console.log(index , messaggio);
+     this.contacts[this.currentContactIndex].messages.splice(index,1)
+
     }
   },
   computed: {
